@@ -1,21 +1,31 @@
-APULIE + MATERA 2026 — STATICKÝ WEB
+APULIE + MATERA 2026 — aktualizace 21. 9. 2026
 
-Obsah:
-- index.html
-- styles.css
-- script.js
-- favicon.svg
+Nahrajte obsah ZIPu přímo do kořenové složky webu puglia.inovak.cz.
+index.html musí ležet přímo v kořeni, nikoli uvnitř další složky.
+Nahraďte všechny dodané soubory společně, aby se obsah a mapa shodovaly.
+Balíček nevyžaduje sestavení, databázi ani API klíč.
+CNAME obsahuje puglia.inovak.cz pro stávající GitHub Pages.
+Samotná příprava balíčku web nepublikuje ani nemění DNS.
 
-NASAZENÍ
-1. Rozbalte ZIP.
-2. Nahrajte všechny soubory do kořenové složky webu (typicky public_html, www, htdocs apod.).
-3. index.html musí být přímo v kořeni cílové složky.
-4. Není potřeba build, databáze ani backend.
+SOUBORY
+index.html — kompletní statický přehled, denní karty a ubytování
+styles.css — původní vzhled doplněný o tabulky, tisk a mobilní úpravy
+trip-data.js — aktuální zastávky, ubytování a denní trasy pro mapu
+script.js — Leaflet mapa a přepínání dní
+favicon.svg — ikona původního webu
+itinerar.md — samostatný český itinerář s klikacími odkazy
+CNAME — vlastní doména
+README.txt — tento návod
 
-Pokud správce domény pouze spravuje DNS a neposkytuje prostor pro webové soubory, je potřeba samostatný webhosting a doménu na něj nasměrovat.
+Text itineráře je dostupný i bez JavaScriptu. Mapa potřebuje připojení:
+Leaflet 1.9.4 se načítá z unpkg.com, podklad z OpenStreetMap.
+Čáry jsou přehledové spojnice, ne silniční trasy. Orientační polohy
+některých ubytování jsou označené v detailu markeru. Pro příjezd použijte
+Google Maps odkazy podle názvu ubytování a potvrzení rezervace.
+Delší denní trasy jsou rozdělené do návazných částí s nejvýše třemi
+mezizastávkami pro mobilní Google Maps. Pěší úseky na pláže nejsou jízdou.
 
-MAPA
-Mapa používá Leaflet z CDN a dlaždice OpenStreetMap, takže vyžaduje připojení k internetu.
-
-POZNÁMKA K TRASE
-Barevné čáry spojují zastávky v pořadí itineráře. Nejde o přesnou silniční geometrii. U každého dne je odkaz na Google Maps.
+Původní soubory převzaty z veřejného novak552/puglia (větev main).
+Potvrzené rezervace a snídaně vycházejí ze zadání. Časový plán je návrh,
+nikoli ověřený provozní rozpis. Zdroje poloh a přístupů jsou na webu
+v části Podklady a praktické poznámky a v itinerar.md.
